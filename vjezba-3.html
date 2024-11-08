@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Vježba 3</title>
+</head>
+<body>
+
+    <h1>Vježba - selektiranje elemenata</h1>
+
+    <button id="gumbA">Klikni me!</button>
+
+    <h3 id="naslovA"></h3>
+
+    <script>
+
+        const gumbA = document.querySelector("#gumbA");
+
+        const naslovA = document.querySelector("#naslovA");
+
+        let broj = 1;
+
+        gumbA.onclick = () => {
+            naslovA.textContent = `${broj} klikova`; // Znak ` je AltGR + 7 na tipkovnici !
+            broj += 1;
+        };
+
+    </script>
+    
+</body>
+</html>

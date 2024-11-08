@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM model</title>
+</head>
+<body>
+
+    <h1>JavaScript Document Object Model</h1>
+
+    <form action="">
+
+        Ime: <input type="text">
+        <br>
+        Prezime: <input type="text">
+
+        <br><br>
+        <input type="button" value="Pošalji" onclick="provjeri();"> <!-- na klik pozivamo funkciju provjeri() -->
+
+    </form>
+
+    <!-- koristimo prazan p HTML element kako bi ubacili podatke pomoću JS-a -->
+    <p id="podaci"></p>
+
+    <script>
+        function provjeri() {
+
+            // dohvaćamo vrijednosti input elemenata iz forme
+            let ime = document.forms[0].elements[0].value; // [0] je prvi element
+            let prezime = document.forms[0].elements[1].value; // [1] je drugi element, itd..
+
+            // dohvaćamo element koji ima id="podaci"
+            let podaci = document.getElementById("podaci");
+
+            // pomoću naredbe innerHTML ubacujemo željeni html sadržaj
+            podaci.innerHTML = "<h3>" + ime + "</h3> <h3>" + prezime  + "</h3>";
+
+        }
+    </script>
+</body>
+</html>
